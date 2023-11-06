@@ -1,8 +1,9 @@
 # Arduino_KeyCard_NFC  
 ### 1.Ardiuno  
   Just follow your OS and download [Ardiuno IDE](https://www.arduino.cc/en/software).
+  Ardiuno programming language is based on C and C++. And it is more affordable than Raspberry Pi.  
   -----------------------------------------------------------------------------------  
-  Ardiuno programming lamguage is based on C and C++. And it is more affordable than Raspberry Pi.
+  Raspberry Pi V.S. Arduino
   | Feature             | Raspberry Pi                              | Arduino                   |
 |---------------------|-----------------------------------------|---------------------------|
 | Processor           | ARM Cortex-A72 quad-core                | Atmel ATmega328P          |
