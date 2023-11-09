@@ -23,10 +23,11 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 
   
 ### 2.NFC
+*  NFC vs. RFID
+  
 *  
 *  
-*  
-### 3.Reader and Writer of keycard
-*  
-*  
-*  
+### 3.Code
+*  Reader of keycard
+*  Writer of keycard
+
