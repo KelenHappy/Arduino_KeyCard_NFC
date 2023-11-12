@@ -23,6 +23,7 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 
   
 ### 2.NFC
+* NFC vs. RFID
 ### NFC vs. RFID
 | Feature             | NFC                                       | RFID                                             |
 |---------------------|-----------------------------------------|-------------------------------------------------|
@@ -30,8 +31,11 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 | Range               | Up to 20 cm                             | Up to 100 m or more                             |
 | Communication       | Two-way                                 | One-way or two-way                              |
 | Cost                | Tags are relatively inexpensive         | Tags can be expensive                           |
-You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc).
-*  
+
+You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) about comparison. 
+*  Encryption type
+  1. Symmetric Encryption
+  2. Asymmetric Encryption
 *  
 ### 3.Code
 *  Reader of keycard
