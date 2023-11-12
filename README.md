@@ -33,8 +33,8 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 
 You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) about comparison. 
 ###  Encryption type
-  #### 1. Symmetric Encryption
-  #### 2. Asymmetric Encryption  
+####   (1) Symmetric Encryption
+####   (2) Asymmetric Encryption  
 ## 3.Code
 ### Reader of keycard
 ### Writer of keycard
