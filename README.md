@@ -7,7 +7,7 @@ To get started with Arduino, follow these steps:
 - Download the [Arduino IDE](https://www.arduino.cc/en/software) for your operating system.
 - Arduino programming language is based on C and C++. It is more affordable than Raspberry Pi.
 
-### Raspberry Pi vs. Arduino
+### Raspberry Pi vs. Arduino (Just example. Raspberry have so many version too.)
 
 | Feature             | Raspberry Pi                              | Arduino                   |
 |---------------------|-----------------------------------------|---------------------------|
@@ -24,7 +24,13 @@ If you need to complete a big project and require a more powerful tool, Raspberr
   
 ### 2.NFC
 *  NFC vs. RFID
-  
+  | Feature             | NFC                                     | RFID                     |
+|---------------------|-----------------------------------------|---------------------------|
+| Frequency           | High frequency (13.56 MHz)              | Wide range of frequencies (low, high, ultrahigh)|
+| Range               | Up to 20 cm                             | Up to 100 m or more                     |
+| Communication       | Two-way                                 | One-way or two-way               |
+| Cost                | Tags are relatively inexpensive         | Tags can be expensive     |
+| Applications        | Mobile payments, contactless access, data transfer       | Asset tracking, supply chain management, inventory management, access control                      |
 *  
 *  
 ### 3.Code
