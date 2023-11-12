@@ -24,12 +24,12 @@ If you need to complete a big project and require a more powerful tool, Raspberr
   
 ### 2.NFC
 *  NFC vs. RFID
-| Feature             | NFC                                     | RFID                                             |
-|---------------------|-----------------------------------------|-------------------------------------------------|  
-| Frequency           | High frequency (13.56 MHz)              | Wide range of frequencies (low, high, ultrahigh)|  
-| Range               | Up to 20 cm                             | Up to 100 m or more                             |  
-| Communication       | Two-way                                 | One-way or two-way                              |  
-| Cost                | Tags are relatively inexpensive         | Tags can be expensive                           |  
+| Feature             | NFC                                       | RFID                                             |
+|---------------------|-----------------------------------------|-------------------------------------------------|
+| Frequency           | High frequency (13.56 MHz)              | Wide range of frequencies (low, high, ultrahigh)|
+| Range               | Up to 20 cm                             | Up to 100 m or more                             |
+| Communication       | Two-way                                 | One-way or two-way                              |
+| Cost                | Tags are relatively inexpensive         | Tags can be expensive                           |
 *  
 *  
 ### 3.Code
