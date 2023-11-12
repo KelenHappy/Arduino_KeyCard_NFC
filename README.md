@@ -1,6 +1,6 @@
 # Arduino KeyCard NFC
 
-### 1. Arduino
+## 1. Arduino
 
 To get started with Arduino, follow these steps:
 
@@ -22,8 +22,7 @@ To get started with Arduino, follow these steps:
 If you need to complete a big project and require a more powerful tool, Raspberry Pi might be a better choice. For smaller projects, you can start with Arduino. However, be aware of different hardware versions. You can learn more about them in the [Arduino Hardware](https://www.arduino.cc/en/hardware) documentation.
 
   
-### 2.NFC
-* NFC vs. RFID
+## 2.NFC
 ### NFC vs. RFID
 | Feature             | NFC                                       | RFID                                             |
 |---------------------|-----------------------------------------|-------------------------------------------------|
@@ -33,11 +32,10 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 | Cost                | Tags are relatively inexpensive         | Tags can be expensive                           |
 
 You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) about comparison. 
-*  Encryption type
-  1. Symmetric Encryption
-  2. Asymmetric Encryption
-*  
-### 3.Code
-*  Reader of keycard
-*  Writer of keycard
+###  Encryption type
+  (1) Symmetric Encryption
+  (2) Asymmetric Encryption  
+## 3.Code
+### Reader of keycard
+### Writer of keycard
 
