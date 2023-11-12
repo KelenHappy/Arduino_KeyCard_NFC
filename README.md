@@ -30,6 +30,7 @@ If you need to complete a big project and require a more powerful tool, Raspberr
 | Range               | Up to 20 cm                             | Up to 100 m or more                             |
 | Communication       | Two-way                                 | One-way or two-way                              |
 | Cost                | Tags are relatively inexpensive         | Tags can be expensive                           |
+You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc).
 *  
 *  
 ### 3.Code
