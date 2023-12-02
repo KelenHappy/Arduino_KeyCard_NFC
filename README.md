@@ -36,6 +36,11 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
 - Symmetric Encryption
 - Asymmetric Encryption  
 ## 3.Code
+### Find Your Board
+## CAREFUL !!! Find your board on your Arduino chip and find it in Arduino IDE
+## 
+![](https://github.com/KelenHappy/Arduino_KeyCard_NFC/blob/main/image/328pb_tool_box.png)
+
 ### Reader of keycard
 ### Writer of keycard
 
