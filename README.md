@@ -35,7 +35,7 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
 ##  Encryption type
 - Symmetric Encryption  
   Just need a key to encrypt and decrypt. So if we know how to encrypt and we know how to decrypt.  
-  Some old equipment is using it. So you nuch be careful.
+  Some old equipment is using it. So you nuch be careful.  
   Door, Control Panel, Elevator Shaft, ......    
 - Asymmetric Encryption  
   You need two or more key to encrypt and decrypt.  
