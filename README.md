@@ -41,7 +41,20 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
   You need two or more key to encrypt and decrypt.  
   It is much more safe.  
   Credit card, Email Encryption, SL/TLS for Secure Web Browsing, ......  
-   
+- Conclude
+  Encryption is used in so many aspects of our daily lives to ensure the security and privacy of information.
+    1. Online Communication  
+    2. Secure Browsing  
+    3. Wi-Fi Networks  
+    4. Mobile Devices  
+    5. Payments and Banking  
+    6. File Storage and Cloud Services  
+    7. Software and App Security  
+    8. VPN (Virtual Private Network)  
+    9. Email Security  
+    10. Healthcare Information  
+    11. Internet of Things (IoT) Devices  
+    12. Online Gaming
 # 3.Code
 ## Find Your Board
 ### CAREFUL !!! Find your board on your Arduino chip
