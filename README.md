@@ -42,19 +42,19 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
   It is much more safe.  
   Credit card, Email Encryption, SL/TLS for Secure Web Browsing, ......  
 - Conclude
-  Encryption is used in so many aspects of our daily lives to ensure the security and privacy of information.
-    (1) Online Communication  
-    2. Secure Browsing  
-    3. Wi-Fi Networks  
-    4. Mobile Devices  
-    5. Payments and Banking  
-    6. File Storage and Cloud Services  
-    7. Software and App Security  
-    8. VPN (Virtual Private Network)  
-    9. Email Security  
-    10. Healthcare Information  
-    11. Internet of Things (IoT) Devices  
-    12. Online Gaming
+  Encryption is used in so many aspects of our daily lives to ensure the security and privacy of information.  
+    - Online Communication  
+    - Secure Browsing  
+    - Wi-Fi Networks  
+    - Mobile Devices  
+    - Payments and Banking  
+    - File Storage and Cloud Services  
+    - Software and App Security  
+    - VPN (Virtual Private Network)  
+    - Email Security  
+    - Healthcare Information  
+    - Internet of Things (IoT) Devices  
+    - Online Gaming
 # 3.Code
 ## Find Your Board
 ### CAREFUL !!! Find your board on your Arduino chip
