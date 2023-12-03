@@ -43,7 +43,7 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
   Credit card, Email Encryption, SL/TLS for Secure Web Browsing, ......  
 - Conclude
   Encryption is used in so many aspects of our daily lives to ensure the security and privacy of information.
-    1. Online Communication  
+    (1) Online Communication  
     2. Secure Browsing  
     3. Wi-Fi Networks  
     4. Mobile Devices  
