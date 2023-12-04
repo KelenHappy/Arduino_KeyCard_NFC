@@ -1,92 +1,57 @@
-/*
- * --------------------------------------------------------------------------------------------------------------------
- * Example showing how to read data from more than one PICC to serial.
- * --------------------------------------------------------------------------------------------------------------------
- * This is a MFRC522 library example; for further details and other examples see: https://github.com/OSSLibraries/Arduino_MFRC522v2
- *
- * Example sketch/program showing how to read data from more than one PICC (that is: a RFID Tag or Card) using a
- * MFRC522 based RFID Reader on the Arduino SPI interface.
- *
- * Warning: This may not work! Multiple devices at one SPI are difficult and cause many trouble!! Engineering skill
- *          and knowledge are required!
- *
- * @license Released into the public domain.
- *
- * Typical pin layout used:
- * -----------------------------------------------------------------------------------------
- *             MFRC522      Arduino       Arduino   Arduino    Arduino          Arduino
- *             Reader/PCD   Uno/101       Mega      Nano v3    Leonardo/Micro   Pro Micro
- * Signal      Pin          Pin           Pin       Pin        Pin              Pin
- * -----------------------------------------------------------------------------------------
- * SPI SS 1    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
- * SPI SS 2    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
- * SPI MOSI    MOSI         11 / ICSP-4   51        D11        ICSP-4           16
- * SPI MISO    MISO         12 / ICSP-1   50        D12        ICSP-1           14
- * SPI SCK     SCK          13 / ICSP-3   52        D13        ICSP-3           15
- *
- * Not found? For more see: https://github.com/OSSLibraries/Arduino_MFRC522v2#pin-layout
- */
+#include <SPI.h>
+#include <MFRC522.h>
 
-// Note for i2c:
-// With i2c possible if every device has a own unique address.
-// Otherwise a i2c multiplexer is required, which requires a own implementation of MFRC522Driver.h. 
+#define SS_PIN 10
+#define RST_PIN 9
+ 
+MFRC522 rfid(SS_PIN, RST_PIN);
 
-#include <MFRC522v2.h>
-#include <MFRC522DriverSPI.h>
-#include <MFRC522DriverPinSimple.h>
-#include <MFRC522Debug.h>
+MFRC522::MIFARE_Key key; 
 
-MFRC522DriverPinSimple ss_1_pin(10); // Configurable, take an unused pin, only HIGH/LOW required, must be different to SS 2.
-MFRC522DriverPinSimple ss_2_pin(8); // Configurable, take an unused pin, only HIGH/LOW required, must be different to SS 1.
+byte nuidPICC[4];
 
-MFRC522DriverSPI driver_1{ss_1_pin};
-MFRC522DriverSPI driver_2{ss_2_pin};
+void setup() { 
+  Serial.begin(9600);
+  SPI.begin();
+  rfid.PCD_Init();
 
-MFRC522 readers[]{driver_1, driver_2};   // Create MFRC522 instance.
-
-/**
- * Initialize.
- */
-void setup() {
-  Serial.begin(115200);  // Initialize serial communications with the PC for debugging.
-  while (!Serial);     // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4).
-  
-  for (MFRC522 reader : readers) {
-    reader.PCD_Init(); // Init each MFRC522 card.
-    Serial.print(F("Reader "));
-    static uint8_t i = 0;
-    i++;
-    Serial.print(i);
-    Serial.print(F(": "));
-    MFRC522Debug::PCD_DumpVersionToSerial(reader, Serial);
+  for (byte i = 0; i < 6; i++) {
+    key.keyByte[i] = 0xFF;
   }
+
+  Serial.println(F("This code scan the MIFARE Classsic NUID."));
+  Serial.print(F("Using the following key:"));
+  printHex(key.keyByte, MFRC522::MF_KEY_SIZE);
+  Serial.println();
+}
+ 
+void loop() {
+  if ( ! rfid.PICC_IsNewCardPresent())
+    return;
+
+  if ( ! rfid.PICC_ReadCardSerial())
+    return;
+
+  MFRC522::PICC_Type piccType = rfid.PICC_GetType(rfid.uid.sak);
+
+  if (piccType != MFRC522::PICC_TYPE_MIFARE_MINI &&  
+    piccType != MFRC522::PICC_TYPE_MIFARE_1K &&
+    piccType != MFRC522::PICC_TYPE_MIFARE_4K) {
+    Serial.println(F("Your tag is not of type MIFARE Classic."));
+    return;
+  }
+
+  printHex(rfid.uid.uidByte, rfid.uid.size);
+  Serial.println();
+
+  rfid.PICC_HaltA();
+
+  rfid.PCD_StopCrypto1();
 }
 
-/**
- * Main loop.
- */
-void loop() {
-  // Look for new cards.
-  for (MFRC522 reader : readers) {
-    if (reader.PICC_IsNewCardPresent() && reader.PICC_ReadCardSerial()) {
-      Serial.print(F("Reader "));
-      static uint8_t i = 0;
-      i++;
-      Serial.print(i);
-      
-      // Show some details of the PICC (that is: the tag/card).
-      Serial.print(F(": Card UID:"));
-      MFRC522Debug::PrintUID(Serial, reader.uid);
-      Serial.println();
-      
-      Serial.print(F("PICC type: "));
-      MFRC522::PICC_Type piccType = reader.PICC_GetType(reader.uid.sak);
-      Serial.println(MFRC522Debug::PICC_GetTypeName(piccType));
-      
-      // Halt PICC.
-      reader.PICC_HaltA();
-      // Stop encryption on PCD.
-      reader.PCD_StopCrypto1();
-    }
+void printHex(byte *buffer, byte bufferSize) {
+  for (byte i = 0; i < bufferSize; i++) {
+    Serial.print(buffer[i] < 0x10 ? " 0" : "");
+    Serial.print(buffer[i], HEX);
   }
 }
