@@ -60,8 +60,9 @@ You can learn [more](https://www.atlasrfidstore.com/rfid-insider/rfid-vs-nfc) ab
 ### CAREFUL !!! Find your board on your Arduino chip
 ![](https://github.com/KelenHappy/Arduino_KeyCard_NFC/blob/main/image/328pb_tool_box.png)
 ### And choose it in Arduino IDE
-![](https://github.com/KelenHappy/Arduino_KeyCard_NFC/blob/9cbd2125da0e7e70e4dcd0c547c705f1e25f1f5e/image/choose_your_board.png)
-
+![](https://github.com/KelenHappy/Arduino_KeyCard_NFC/blob/9cbd2125da0e7e70e4dcd0c547c705f1e25f1f5e/image/choose_your_board.png)  
+Find some [example](https://github.com/OSSLibraries/Arduino_MFRC522v2/tree/master).  
+You can download libary in same way.  
 ## Reader of keycard
 ## Writer of keycard
 
